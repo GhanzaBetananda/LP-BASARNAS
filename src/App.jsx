@@ -20,7 +20,7 @@ const PORTALS = [
     id: "silogsar",
     name: "SILOGSAR",
     description:
-      "Sistem informasi pengelolaan logistik serta sarana dan prasarana.",
+      "Sistem informasi pengelolaan penggunaan barang",
     // TODO: isi link website Silogsar di sini
     url: "https://script.google.com/macros/s/AKfycbw6mxluiCe1XAVHQyeSlqJ7qKG8O7H6TCT8qX8kwn7RBFnfGriWt46kn1KT3lxwlK2S/exec",
   },
@@ -28,7 +28,7 @@ const PORTALS = [
     id: "emonsar",
     name: "EMONSAR",
     description:
-      "Sistem pemantauan (monitoring) dan evaluasi kinerja personel.",
+      "Sistem pemantauan dan checking kendaraan Basarnas",
     // TODO: isi link website Emonsar di sini
     url: "https://emonsar-sar-banyuwangi.vercel.app/",
   },

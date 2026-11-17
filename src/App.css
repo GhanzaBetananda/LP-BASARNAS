@@ -20,11 +20,7 @@
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
+  background: #fff;
   border-bottom: 1px solid var(--line);
 }
 
@@ -33,13 +29,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 12px 0;
+  padding: 8px 0;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   min-width: 0;
 }
 
@@ -53,7 +49,7 @@
 }
 
 .brand-logos img {
-  height: 46px;
+  height: 40px;
   width: auto;
   object-fit: contain;
   transition: transform 0.25s ease;
@@ -65,7 +61,7 @@
 
 .brand-agency {
   display: block;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -74,14 +70,14 @@
 
 .brand-office {
   display: block;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 800;
   line-height: 1.25;
 }
 
 .brand-division {
   display: block;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--ink-soft);
 }
@@ -521,6 +517,7 @@ a.portal-card:hover .portal-cta svg {
 }
 
 /* ===================== Responsif ===================== */
+/* Tablet & layar menengah */
 @media (max-width: 960px) {
   .portal-grid {
     grid-template-columns: 1fr;
@@ -529,38 +526,154 @@ a.portal-card:hover .portal-cta svg {
   }
 }
 
+/* Ponsel */
 @media (max-width: 720px) {
+  .container {
+    width: min(1120px, 100% - 36px);
+  }
+
+  /* Header lebih ringkas */
+  .header-inner {
+    padding: 7px 0;
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 12px;
+  }
+
   .brand-logos {
     gap: 8px;
     padding-right: 12px;
   }
 
   .brand-logos img {
-    height: 36px;
+    height: 34px;
   }
 
   .brand-agency {
-    font-size: 10px;
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
   }
 
   .brand-office {
     font-size: 15px;
   }
 
+  .brand-division {
+    font-size: 11.5px;
+  }
+
   .header-cta {
     display: none;
   }
 
+  /* Hero */
   .hero {
-    padding: 64px 0 56px;
+    padding: 60px 0 52px;
   }
 
+  .hero-badge {
+    font-size: 11px;
+    padding: 7px 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(25px, 7vw, 30px);
+    margin: 18px auto 12px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+  }
+
+  /* Statistik disusun ke bawah agar lega di layar sempit */
   .hero-stats {
-    margin-top: 34px;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 30px;
+  }
+
+  .hero-stat {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    padding: 9px 0;
+  }
+
+  .hero-stat + .hero-stat {
+    width: 100%;
+    max-width: 250px;
+    margin-inline: auto;
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid rgba(243, 112, 33, 0.25);
   }
 
   .hero-stat strong {
-    font-size: 24px;
+    font-size: 22px;
+  }
+
+  /* Portal */
+  .portals {
+    padding: 56px 0 64px;
+  }
+
+  .section-head {
+    margin-bottom: 30px;
+  }
+
+  .portal-grid {
+    gap: 16px;
+  }
+
+  .portal-card {
+    padding: 24px 20px 22px;
+  }
+
+  /* Footer rata tengah */
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-logos {
+    justify-content: center;
+    padding-right: 0;
+    border-right: 0;
+  }
+}
+
+/* Ponsel kecil */
+@media (max-width: 480px) {
+  .container {
+    width: min(1120px, 100% - 28px);
+  }
+
+  .brand-agency {
+    display: none;
+  }
+
+  .brand-logos img {
+    height: 30px;
+  }
+
+  .brand-office {
+    font-size: 14px;
+  }
+}
+
+/* Umpan balik sentuh pada perangkat layar sentuh */
+@media (hover: none) {
+  a.portal-card:active {
+    transform: scale(0.98);
+    box-shadow: var(--shadow-sm);
   }
 }
 
