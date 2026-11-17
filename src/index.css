@@ -1,0 +1,63 @@
+:root {
+  /* ===== Palet: putih & oranye (gaya pemerintahan bersih) ===== */
+  --orange: #f37021;
+  --orange-dark: #d95f10;
+  --orange-soft: #fff3ea;
+  --orange-line: rgba(243, 112, 33, 0.35);
+
+  --ink: #1f2733;
+  --ink-soft: #5b6472;
+  --line: #e7e9ee;
+  --bg: #ffffff;
+  --bg-soft: #fafafa;
+
+  --radius: 16px;
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 14px 34px -14px rgba(16, 24, 40, 0.18);
+
+  --font: 'Plus Jakarta Sans', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 100% - 48px);
+  margin-inline: auto;
+}
